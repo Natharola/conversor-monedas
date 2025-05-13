@@ -1,16 +1,24 @@
-conversor-monedas
-programa que permite a través de una API conversión de monedas
+# Conversor de Monedas
 
-🚀 Funcionalidad
-Conversión entre dos monedas mediante una solicitud HTTP.
-Manejo de errores comunes (moneda inválida, clave API inválida, límites superados).
-Devuelve el resultado como una cadena con el valor convertido.
-🛠 Requisitos
-Java 11 o superior
-Biblioteca Gson para procesar JSON
-Clave de API de ExchangeRate (gratuita o de pago)
-📦 Instalación
-Clona el repositorio:
+Este es un pequeño proyecto en Java que permite convertir una cantidad de una moneda a otra utilizando la [ExchangeRate API](https://www.exchangerate-api.com/).
+
+## 🚀 Funcionalidad
+
+- Conversión entre dos monedas mediante una solicitud HTTP.
+- Manejo de errores comunes (moneda inválida, clave API inválida, límites superados).
+- Devuelve el resultado como una cadena con el valor convertido.
+
+## 🛠 Requisitos
+
+- Java 11 o superior
+- Biblioteca [Gson](https://github.com/google/gson) para procesar JSON
+- Clave de API de ExchangeRate (gratuita o de pago)
+
+## 📦 Instalación
+
+1. Clona el repositorio:
+
+```bash
 git clone https://github.com/tuusuario/conversor-moneda-java.git
 cd conversor-moneda-java
 Asegúrate de tener la biblioteca Gson en tu proyecto. Puedes agregarla manualmente o mediante Maven/Gradle.
@@ -18,7 +26,6 @@ Asegúrate de tener la biblioteca Gson en tu proyecto. Puedes agregarla manualme
 Si usas Maven:
 xml
 Copiar
-Editar
 <dependency>
   <groupId>com.google.code.gson</groupId>
   <artifactId>gson</artifactId>
@@ -32,7 +39,6 @@ Puedes obtener una aquí: https://www.exchangerate-api.com/
 💡 Ejemplo de uso
 java
 Copiar
-Editar
 ConsultaConversionMoneda consulta = new ConsultaConversionMoneda();
 String resultado = consulta.buscaConversion("USD", "CLP", 100);
 System.out.println("Resultado: " + resultado);
